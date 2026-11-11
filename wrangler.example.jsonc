@@ -1,0 +1,14 @@
+// Copy to wrangler.jsonc and fill in your values.
+// Secrets are set separately: wrangler secret put BOT_TOKEN / WEBHOOK_SECRET
+{
+  "name": "reminder-bot",
+  "main": "src/index.js",
+  "compatibility_date": "2024-09-23",
+  "no_bundle": true,
+  // Telegram user ids allowed to use the bot (they can also share events with each other)
+  "vars": { "ALLOWED_IDS": "111111111,222222222" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "reminder-bot-db", "database_id": "<your-d1-database-id>" }
+  ],
+  "triggers": { "crons": ["* * * * *"] }
+}

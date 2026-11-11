@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars*
+.env*
+# real deploy config contains personal Telegram ids
+wrangler.jsonc
